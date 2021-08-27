@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.OnBoarding3">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        style="@style/arrow_back" />
+
+    <TextView
+        android:id="@+id/btnSkip"
+        style="@style/skip" />
+
+    <ImageView
+        android:id="@+id/imgBoard1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSkip"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/on_board_3" />
+
+    <RelativeLayout
+        android:id="@+id/layoutTuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgBoard1"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="45dp">
+
+        <TextView
+            android:id="@+id/tvTuto"
+            style="@style/TextStyle3"
+            android:maxWidth="220dp"
+            android:text="@string/tutorial_3" />
+
+        <TextView
+            style="@style/TextStyle"
+            android:layout_below="@id/tvTuto"
+            android:text="@string/sub_tutorial" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="35dp">
+
+
+        <View
+            android:id="@+id/point1"
+            style="@style/dotted" />
+
+        <View
+            android:id="@+id/point2"
+            style="@style/dotted"
+            android:layout_toRightOf="@id/point1" />
+
+        <View
+            style="@style/current_dotted"
+            android:layout_toRightOf="@id/point2" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnStart"
+        style="@style/button_on_board"
+        android:text="@string/start"
+        />
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.OnBoarding2">
+    <ImageView
+        android:id="@+id/btnBack"
+        style="@style/arrow_back"/>
+    <TextView
+        android:id="@+id/btnSkip"
+        style="@style/skip" />
+    <RelativeLayout
+        android:id="@+id/layoutTuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSkip"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tvTuto"
+            android:text="@string/tutorial_2"
+            android:maxWidth="220dp"
+            style="@style/TextStyle3"/>
+
+        <TextView
+            android:layout_below="@id/tvTuto"
+            android:text="@string/sub_tutorial"
+            style="@style/TextStyle"/>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imgBoard1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutTuto"
+        android:scaleType="fitCenter"
+        android:src="@drawable/on_board_2" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="35dp">
+
+        <View
+            android:id="@+id/point1"
+            style="@style/dotted" />
+
+        <View
+            android:id="@+id/point2"
+            android:layout_toRightOf="@id/point1"
+            style="@style/current_dotted" />
+
+        <View
+            android:layout_toRightOf="@id/point2"
+            style="@style/dotted" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNext"
+        android:text="@string/next"
+        style="@style/button_on_board" />
+</RelativeLayout>

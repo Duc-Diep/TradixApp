@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ConfirmPassChangedActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/ic_bgr_confirm_pass_1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTradix"
+            style="@style/TextStyle5"
+            android:layout_centerInParent="true"
+            android:text="@string/name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/tvTradix"
+            android:src="@drawable/ic_coin" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <TextView
+            android:id="@+id/confirmChange"
+            style="@style/TextStyle4"
+            android:gravity="center"
+            android:text="@string/confirm_change_pass" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/bgrConfirm"
+        app:layout_constraintTop_toBottomOf="@id/layoutConfirm"
+        android:background="@drawable/ic_bgr_confirm_pass_2"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+        <TextView
+            android:text="@string/infor_can_login"
+            android:maxWidth="250dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            style="@style/TextStyle7" />
+        <ImageView
+            android:src="@drawable/ic_bgr_confirm_pass_3"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:src="@drawable/ic_flying_coins"
+            android:layout_margin="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:src="@drawable/ic_flying_coins_2"
+            android:layout_alignParentRight="true"
+            android:layout_margin="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLoginCf"
+        app:layout_constraintTop_toBottomOf="@id/bgrConfirm"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@drawable/purple_button"
+        android:text="@string/login"
+        android:textColor="@color/white_three"
+        android:layout_marginTop="20dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="dotted">
+        <item name="android:layout_width">10dp</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:layout_marginLeft">3dp</item>
+        <item name="android:background">@drawable/point_board_circle</item>
+    </style>
+    <style name="current_dotted">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:layout_marginLeft">3dp</item>
+        <item name="android:background">@drawable/point_board</item>
+    </style>
+    <style name="skip">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:text">@string/skip</item>
+    </style>
+    <style name="button_on_board">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_margin">25dp</item>
+        <item name="android:background">@drawable/gradient_button</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="arrow_back">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:src">@drawable/icons_8_expand_arrow</item>
+    </style>
+
+    <style name="edt_info">
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:background">@drawable/edt_info</item>
+    </style>
+    <style name="btn_confirm">
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:background">@drawable/gradient_button</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/white_three</item>
+    </style>
+    <style name="btn_send_email">
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:background">@drawable/gradient_button</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/white_three</item>
+    </style>
+
+</resources>

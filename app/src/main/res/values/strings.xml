@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TradixApp</string>
+    <string name="name">TRADIX</string>
+    <string name="feature">The future of trading</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_acc">Create a free account</string>
+    <string name="welcome">Welcome!</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="resend_email">Resend Email</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="start">Start</string>
+    <string name="tutorial_1">Start to invest for your future!</string>
+    <string name="tutorial_2">Follow our tips to achieve success!</string>
+    <string name="tutorial_3">Keep your investment safe!</string>
+    <string name="sub_tutorial">Ex totam praesentium incidunt aut.</string>
+    <string name="wait">Wait 5 seconds before sending it</string>
+    <string name="confirm_change_pass">Yay! Your password has been changed</string>
+    <string name="infor_can_login">You can now log into your account with the new password</string>
+
+
+</resources>
