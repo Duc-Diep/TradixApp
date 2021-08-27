@@ -114,4 +114,11 @@
         <item name="android:fontFamily">@font/lato_regular</item>
         <item name="android:textColor">@color/black_six</item>
     </style>
+    <style name="TextStyle16">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:fontFamily">@font/raleway_regular</item>
+        <item name="android:textColor">@color/white_three</item>
+    </style>
 </resources>

@@ -38,6 +38,10 @@ class UserAdapter(var context: Context?,var listUser:ArrayList<User>):RecyclerVi
         }
         return 0
     }
+    fun removeItem(viewHolder: RecyclerView.ViewHolder){
+        listUser.removeAt(viewHolder.adapterPosition)
+        notifyItemRemoved(viewHolder.adapterPosition)
+    }
     class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvName:TextView = itemView.findViewById(R.id.tv_name)
         val tvAddress:TextView = itemView.findViewById(R.id.tv_address)
