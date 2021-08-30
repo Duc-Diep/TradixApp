@@ -12,12 +12,15 @@ import com.example.tradixapp.fragments.HomeFragment
 import com.example.tradixapp.fragments.NewsFragment
 import com.google.android.material.navigation.NavigationBarView
 import kotlinx.android.synthetic.main.activity_main.*
-
+fun AppCompatActivity.hideActionBar() {
+    supportActionBar?.hide()
+}
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        getFragment(HomeFragment())
+        hideActionBar()
+        supportFragmentManager.beginTransaction().replace(R.id.frame_main,HomeFragment()).commit()
         bottom_navi.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.home -> getFragment(HomeFragment())

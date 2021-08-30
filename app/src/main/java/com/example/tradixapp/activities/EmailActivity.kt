@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.activity_email.*
 class EmailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        hideActionBar()
         setContentView(R.layout.activity_email)
         btnSendEmail.setOnClickListener {
             startActivity(Intent(this, ConfirmPassChangedActivity::class.java))

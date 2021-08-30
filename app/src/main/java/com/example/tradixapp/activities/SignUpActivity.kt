@@ -13,6 +13,7 @@ class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
+        hideActionBar()
         btnSignUp.setOnClickListener {
             if (edtEmail.text.toString() == "" || edtPassword.text.toString() == "") {
                 Toast.makeText(this, "Email or password must not blank", Toast.LENGTH_SHORT).show()

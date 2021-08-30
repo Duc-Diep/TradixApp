@@ -1,4 +1,4 @@
-package com.example.tradixapp.objects
+package com.example.tradixapp.utils
 
 import android.content.Context
 import android.content.SharedPreferences

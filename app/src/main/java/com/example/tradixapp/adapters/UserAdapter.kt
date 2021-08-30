@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tradixapp.R
-import com.example.tradixapp.User
+import com.example.tradixapp.objects.User
 
 class UserAdapter(var context: Context?,var listUser:ArrayList<User>):RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
     var onClick:((Int)->Unit)? = null

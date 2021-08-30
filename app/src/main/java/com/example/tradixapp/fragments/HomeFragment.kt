@@ -9,13 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import androidx.recyclerview.widget.RecyclerView.VERTICAL
 import com.example.tradixapp.R
-import com.example.tradixapp.User
+import com.example.tradixapp.objects.User
 import com.example.tradixapp.adapters.TitleAdapter
 import com.example.tradixapp.adapters.UserAdapter
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class HomeFragment : Fragment() {

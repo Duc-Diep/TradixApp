@@ -121,4 +121,96 @@
         <item name="android:fontFamily">@font/raleway_regular</item>
         <item name="android:textColor">@color/white_three</item>
     </style>
+    <style name="TextStyle17">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/raleway_black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textColor">@color/white_three</item>
+    </style>
+    <style name="TextStyle18">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/raleway_black</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/white_three</item>
+    </style>
+    <style name="TextStyle19">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/raleway_bold</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">@color/white_three</item>
+    </style>
+    <style name="TextStyle20">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/raleway_regular</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/white_three</item>
+    </style>
+    <style name="TextStyle21">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/raleway_regular</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/black_four</item>
+    </style>
+    <style name="TextStyle22">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/raleway_regular</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+    <style name="TextStyle23">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/raleway_black</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/black_three</item>
+    </style>
+    <style name="TextStyle24">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:fontFamily">@font/lato_light</item>
+        <item name="android:textColor">@color/black_four</item>
+    </style>
+    <style name="TextStyle25">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:fontFamily">@font/raleway_regular</item>
+        <item name="android:textColor">@color/black_six</item>
+    </style>
+    <style name="TextStyle26">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/raleway_black</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/white_three</item>
+    </style>
+    <style name="TextStyle27">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:fontFamily">@font/lato_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="TextStyle28">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:fontFamily">@font/raleway_regular</item>
+        <item name="android:textColor">@color/black_six</item>
+    </style>
+    <style name="TextStyle29">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:fontFamily">@font/raleway_regular</item>
+        <item name="android:textColor">@color/brownish_grey</item>
+    </style>
 </resources>

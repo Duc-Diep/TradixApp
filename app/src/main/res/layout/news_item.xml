@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white_two"
+    android:layout_height="140dp">
+
+    <ImageView
+        android:id="@+id/news_item_alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/alert" />
+
+    <RelativeLayout
+        android:background="@color/white_three"
+        android:elevation="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/news_item_img"
+            android:scaleType="fitXY"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:src="@drawable/item_1" />
+
+        <TextView
+            android:id="@+id/news_item_sale"
+            style="@style/TextStyle22"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/news_item_img"
+            android:text="ALT -3,87%" />
+
+        <TextView
+            android:id="@+id/news_item_name"
+            style="@style/TextStyle23"
+            android:layout_below="@id/news_item_sale"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/news_item_img"
+            android:text="ATLANTIA" />
+
+        <TextView
+            android:id="@+id/news_item_description"
+            style="@style/TextStyle24"
+            android:layout_below="@id/news_item_name"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/news_item_img"
+            android:maxWidth="250dp"
+            android:text="Illum velit nam voluptatum enim aut ratione ratione officiis totam. Mollitia eum sint tempora ducimus" />
+
+        <TextView
+            android:id="@+id/news_item_time"
+            style="@style/TextStyle24"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/news_item_sale"
+            android:text="3 Sept 2020" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_details" />
+    </RelativeLayout>
+
+</RelativeLayout>

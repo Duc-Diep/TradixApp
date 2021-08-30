@@ -21,6 +21,8 @@
     <string name="confirm_change_pass">Yay! Your password has been changed</string>
     <string name="infor_can_login">You can now log into your account with the new password</string>
     <string name="load_more">Load more</string>
+    <string name="news">NEWS</string>
+    <string name="menu">MENU</string>
 
 
 </resources>
