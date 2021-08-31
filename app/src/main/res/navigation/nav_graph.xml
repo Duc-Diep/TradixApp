@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph">
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.tradixapp.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_coin"
+            app:destination="@id/coin" />
+    </fragment>
+    <fragment
+        android:id="@+id/coin"
+        android:name="com.example.tradixapp.fragments.CoinFragment"
+        android:label="fragment_coin"
+        tools:layout="@layout/fragment_coin" >
+    </fragment>
+    <fragment
+        android:id="@+id/news"
+        android:name="com.example.tradixapp.fragments.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_fragment_news_to_fragment_news_detail"
+            app:destination="@id/news_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/news_details"
+        android:name="com.example.tradixapp.fragments.NewsDetails"
+        android:label="fragment_news_detail"
+        tools:layout="@layout/fragment_news_details" >
+    </fragment>
+    <fragment
+        android:id="@+id/customer"
+        android:name="com.example.tradixapp.fragments.CustomeFragment"
+        android:label="fragment_customer"
+        tools:layout="@layout/fragment_custome" >
+    </fragment>
+</navigation>

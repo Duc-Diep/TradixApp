@@ -6,7 +6,7 @@
         android:title="Home"
         android:icon="@drawable/icons_8_increase"/>
     <item
-        android:id="@+id/chart"
+        android:id="@+id/coin"
         android:title="Chart"
         android:icon="@drawable/icons_8_chart"/>
     <item

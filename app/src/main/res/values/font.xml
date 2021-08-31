@@ -213,4 +213,11 @@
         <item name="android:fontFamily">@font/raleway_regular</item>
         <item name="android:textColor">@color/brownish_grey</item>
     </style>
+    <style name="TextStyle30">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:fontFamily">@font/raleway_medium</item>
+        <item name="android:textColor">@color/black_three</item>
+    </style>
 </resources>

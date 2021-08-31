@@ -5,10 +5,9 @@
     android:layout_height="60dp">
     <ImageView
         android:id="@+id/menu_item_icon"
-        android:src="@drawable/icons_8_alarm"
+        android:src="@drawable/icons_8_profit_2"
         android:layout_centerVertical="true"
         android:padding="10dp"
-        android:background="@drawable/bgr_gradient_purple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
