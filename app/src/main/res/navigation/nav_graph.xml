@@ -2,41 +2,42 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_home">
     <fragment
-        android:id="@+id/home"
+        android:id="@+id/fragment_home"
         android:name="com.example.tradixapp.fragments.HomeFragment"
-        android:label="fragment_home"
+        android:label="Home"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_fragment_home_to_fragment_coin"
-            app:destination="@id/coin" />
+            app:destination="@id/fragment_coin" />
     </fragment>
     <fragment
-        android:id="@+id/coin"
+        android:id="@+id/fragment_coin"
         android:name="com.example.tradixapp.fragments.CoinFragment"
-        android:label="fragment_coin"
+        android:label="Coin"
         tools:layout="@layout/fragment_coin" >
     </fragment>
     <fragment
-        android:id="@+id/news"
+        android:id="@+id/fragment_news"
         android:name="com.example.tradixapp.fragments.NewsFragment"
-        android:label="fragment_news"
+        android:label="News"
         tools:layout="@layout/fragment_news" >
         <action
             android:id="@+id/action_fragment_news_to_fragment_news_detail"
-            app:destination="@id/news_details" />
+            app:destination="@id/fragment_news_details" />
     </fragment>
     <fragment
-        android:id="@+id/news_details"
+        android:id="@+id/fragment_news_details"
         android:name="com.example.tradixapp.fragments.NewsDetails"
-        android:label="fragment_news_detail"
+        android:label="News Detail"
         tools:layout="@layout/fragment_news_details" >
     </fragment>
     <fragment
-        android:id="@+id/customer"
+        android:id="@+id/fragment_customer"
         android:name="com.example.tradixapp.fragments.CustomeFragment"
-        android:label="fragment_customer"
+        android:label="Customer"
         tools:layout="@layout/fragment_custome" >
     </fragment>
 </navigation>
