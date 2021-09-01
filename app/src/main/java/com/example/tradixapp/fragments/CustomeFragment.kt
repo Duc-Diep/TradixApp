@@ -13,13 +13,6 @@ import kotlinx.android.synthetic.main.fragment_custome.view.*
 class CustomeFragment :Fragment() {
     lateinit var menuAdapter:MenuAdapter
     lateinit var listItem:ArrayList<MenuItem>
-    fun newInstance():CustomeFragment {
-        val args = Bundle()
-
-        val fragment = CustomeFragment()
-        fragment.arguments = args
-        return fragment
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,6 +21,9 @@ class CustomeFragment :Fragment() {
     ): View? {
         var view = inflater.inflate(R.layout.fragment_custome,container,false)
         initAdapter()
+        view.btn_back.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
         view.rcv_menu.apply {
             setHasFixedSize(true)
             adapter = menuAdapter

@@ -7,21 +7,21 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tradixapp.R
-import com.example.tradixapp.objects.User
+import com.example.tradixapp.objects.Coin
 
-class UserAdapter(var context: Context?,var listUser:ArrayList<User>):RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
+class CoinAdapter(var context: Context?, var listCoin:ArrayList<Coin>):RecyclerView.Adapter<CoinAdapter.UserViewHolder>() {
     var onClick:((Int)->Unit)? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
-        var view  = LayoutInflater.from(context).inflate(R.layout.user_item,parent,false)
+        var view  = LayoutInflater.from(context).inflate(R.layout.coin_item,parent,false)
         return UserViewHolder(view)
     }
 
-    fun setCallBack(callBack : (Int)->Unit) {
+    fun setOnItemClick(callBack : (Int)->Unit) {
         onClick = callBack
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
-        var user = listUser[position]
+        var user = listCoin[position]
         holder.tvName.text = "${user.name} $position"
         holder.tvAddress.text = user.address
         holder.tvTime.text = user.time
@@ -33,13 +33,13 @@ class UserAdapter(var context: Context?,var listUser:ArrayList<User>):RecyclerVi
     }
 
     override fun getItemCount(): Int {
-        if (listUser!=null){
-            return listUser.size
+        if (listCoin!=null){
+            return listCoin.size
         }
         return 0
     }
     fun removeItem(viewHolder: RecyclerView.ViewHolder){
-        listUser.removeAt(viewHolder.adapterPosition)
+        listCoin.removeAt(viewHolder.adapterPosition)
         notifyItemRemoved(viewHolder.adapterPosition)
     }
     class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

@@ -13,14 +13,14 @@ class OnBoarding3 : AppCompatActivity() {
         setContentView(R.layout.activity_on_boarding3)
         hideActionBar()
         AppPreferences.init(this)
-        btnStart.setOnClickListener {
+        btn_start.setOnClickListener {
             AppPreferences.isCompleteTutorial = true
             startActivity(Intent(this, LoginActivity::class.java))
         }
-        btnBack.setOnClickListener {
+        btn_back.setOnClickListener {
             finish()
         }
-        btnSkip.setOnClickListener {
+        btn_skip.setOnClickListener {
             AppPreferences.isCompleteTutorial = true
             startActivity(Intent(this, LoginActivity::class.java))
         }

@@ -18,9 +18,9 @@
         android:layout_alignParentBottom="true"
         app:menu="@menu/menu_bottom"
         app:labelVisibilityMode="unlabeled"
-        app:itemIconTint="@drawable/tab_color"
-        app:itemTextColor="@drawable/tab_color"
+        app:itemIconTint="@drawable/selected_tab_color"
         android:background="@color/white_three"
+        app:itemBackground="@drawable/selected_bgr_tab_item"
         app:itemIconSize="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

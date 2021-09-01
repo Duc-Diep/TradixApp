@@ -7,24 +7,24 @@
     tools:context=".activities.OnBoarding3">
 
     <ImageView
-        android:id="@+id/btnBack"
+        android:id="@+id/btn_back"
         style="@style/arrow_back" />
 
     <TextView
-        android:id="@+id/btnSkip"
+        android:id="@+id/btn_skip"
         style="@style/skip" />
 
     <ImageView
         android:id="@+id/imgBoard1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnSkip"
+        android:layout_below="@id/btn_skip"
         android:layout_marginTop="20dp"
         android:scaleType="fitCenter"
         android:src="@drawable/on_board_3" />
 
     <RelativeLayout
-        android:id="@+id/layoutTuto"
+        android:id="@+id/layout_tutorial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imgBoard1"
@@ -65,8 +65,7 @@
     </RelativeLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnStart"
+        android:id="@+id/btn_start"
         style="@style/button_on_board"
-        android:text="@string/start"
-        />
+        android:text="@string/start" />
 </RelativeLayout>

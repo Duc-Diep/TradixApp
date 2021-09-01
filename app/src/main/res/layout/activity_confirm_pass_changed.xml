@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/tvTradix"
+            android:id="@+id/tv_tradix"
             style="@style/TextStyle9"
             android:layout_centerInParent="true"
             android:text="@string/name"
@@ -27,12 +27,12 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="20dp"
-            android:layout_toRightOf="@id/tvTradix"
+            android:layout_toRightOf="@id/tv_tradix"
             android:src="@drawable/ic_coin" />
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/layoutConfirm"
+        android:id="@+id/layout_confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="-30dp"
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@id/header">
 
         <TextView
-            android:id="@+id/confirmChange"
+            android:id="@+id/confirm_change"
             style="@style/TextStyle4"
             android:gravity="center"
             android:text="@string/confirm_change_pass" />
@@ -49,8 +49,8 @@
 
     </RelativeLayout>
     <RelativeLayout
-        android:id="@+id/bgrConfirm"
-        app:layout_constraintTop_toBottomOf="@id/layoutConfirm"
+        android:id="@+id/bgr_confirm"
+        app:layout_constraintTop_toBottomOf="@id/layout_confirm"
         android:background="@drawable/ic_bgr_confirm_pass_2"
         android:layout_width="match_parent"
         android:layout_height="400dp">
@@ -78,8 +78,8 @@
             android:layout_height="wrap_content"/>
     </RelativeLayout>
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnLoginCf"
-        app:layout_constraintTop_toBottomOf="@id/bgrConfirm"
+        android:id="@+id/btn_login_cf"
+        app:layout_constraintTop_toBottomOf="@id/bgr_confirm"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:background="@drawable/purple_button"

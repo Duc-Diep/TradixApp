@@ -19,10 +19,10 @@ class OnBoarding1 : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-        btnNext.setOnClickListener {
+        btn_next.setOnClickListener {
             startActivity(Intent(this, OnBoarding2::class.java))
         }
-        btnSkip.setOnClickListener {
+        btn_skip.setOnClickListener {
             AppPreferences.isCompleteTutorial = true
             startActivity(Intent(this, LoginActivity::class.java))
         }

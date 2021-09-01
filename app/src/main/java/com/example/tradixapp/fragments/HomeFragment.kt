@@ -6,26 +6,28 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.VERTICAL
 import com.example.tradixapp.R
-import com.example.tradixapp.objects.User
+import com.example.tradixapp.objects.Coin
 import com.example.tradixapp.adapters.TitleAdapter
-import com.example.tradixapp.adapters.UserAdapter
+import com.example.tradixapp.adapters.CoinAdapter
+import com.example.tradixapp.objects.Title
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
+
 
 class HomeFragment : Fragment() {
     lateinit var titleAdapter:TitleAdapter
-    lateinit var userAdapter:UserAdapter
-    lateinit var listUser:ArrayList<User>
-    fun newInstance(): HomeFragment {
-        val args = Bundle()
-        val fragment = HomeFragment()
-        fragment.arguments = args
-        return fragment
-    }
+    lateinit var coinAdapter:CoinAdapter
+    lateinit var listTitle:ArrayList<Title>
+    lateinit var listCoin:ArrayList<Coin>
+    lateinit var controller:NavController
+    var indexTitle:Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,17 +35,20 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home,container,false)
+        //khởi tạo rcv title
         initAdapter()
+        controller = findNavController()
         view.rcv_title.adapter = titleAdapter
+
+        //khởi tạo rcv item coin
+
         view.rcv_item_home.apply {
-            adapter = userAdapter
+            adapter = coinAdapter
             addItemDecoration(DividerItemDecoration(context, VERTICAL))
         }
 
-        userAdapter.setCallBack {
-            Toast.makeText(context,"${listUser[it]}",Toast.LENGTH_SHORT).show()
-        }
 
+        // itemTouchHelper xóa item
         val itemTouchHelperCallBack = object : ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT){
             override fun onMove(
                 recyclerView: RecyclerView,
@@ -54,7 +59,7 @@ class HomeFragment : Fragment() {
             }
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, position: Int) {
-                userAdapter.removeItem(viewHolder)
+                coinAdapter.removeItem(viewHolder)
             }
 
         }
@@ -63,37 +68,49 @@ class HomeFragment : Fragment() {
         itemTouchHelper.attachToRecyclerView(view.rcv_item_home)
 
 
-
+            //loadmore
         view.btnLoadMore.setOnClickListener {
-            listUser.apply {
+            listCoin.apply {
                 for (i in 1..10 ){
-                    add(User("Điệp","NYSE","12:21:32","23.03","+203 (+1,04%)"))
+                    add(Coin("USD","NYSE","12:21:32","23.03","+203 (+1,04%)"))
                 }
             }
             view.progress_bar.visibility = View.VISIBLE
-            userAdapter.notifyDataSetChanged()
+            coinAdapter.notifyDataSetChanged()
             view.progress_bar.visibility = View.GONE
         }
+
 
         return view
     }
     fun initAdapter(){
-        var listTitle = arrayListOf("INDEX","SHARES","CURRENCIES","FUTURES","CRYPTO")
-        titleAdapter = TitleAdapter(context,listTitle)
-        listUser = ArrayList()
-        listUser.apply {
-            add(User("Điệp","NYSE","12:21:32","23.03","+203 (+1,04%)"))
-            add(User("Điệp","NYSE","12:21:32","23.03","+203 (+1,04%)"))
-            add(User("Điệp","NYSE","12:21:32","23.03","+203 (+1,04%)"))
-            add(User("Điệp","NYSE","12:21:32","23.03","+203 (+1,04%)"))
-            add(User("Điệp","NYSE","12:21:32","23.03","+203 (+1,04%)"))
-            add(User("Điệp","NYSE","12:21:32","23.03","+203 (+1,04%)"))
-            add(User("Điệp","NYSE","12:21:32","23.03","+203 (+1,04%)"))
-            add(User("Điệp","NYSE","12:21:32","23.03","+203 (+1,04%)"))
-            add(User("Điệp","NYSE","12:21:32","23.03","+203 (+1,04%)"))
-            add(User("Điệp","NYSE","12:21:32","23.03","+203 (+1,04%)"))
+        //init title
+        listTitle = ArrayList()
+        listTitle.apply {
+            add(Title("INDEX",true))
+            add(Title("SHARES",false))
+            add(Title("CURRENCIES",false))
+            add(Title("FUTURES",false))
+            add(Title("CRYPTO",false))
         }
-        userAdapter = UserAdapter(context,listUser)
+        titleAdapter = TitleAdapter(context,listTitle,"pink")
+
+
+
+        listCoin = ArrayList()
+        listCoin.apply {
+            for (i in 1..10 ){
+                add(Coin("USD","NYSE","12:21:32","23.03","+203 (+1,04%)"))
+            }
+        }
+        coinAdapter = CoinAdapter(context,listCoin)
+        coinAdapter.setOnItemClick {
+//            Toast.makeText(context,"${listCoin[it]}",Toast.LENGTH_SHORT).show()
+            var coin = listCoin[it]
+            coin.name = coin.name + " $it"
+            val action = HomeFragmentDirections.actionFragmentHomeToFragmentCoin(coin)
+            controller.navigate(action)
+        }
     }
 
 }

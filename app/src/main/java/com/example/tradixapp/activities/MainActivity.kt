@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 fun AppCompatActivity.hideActionBar() {
     supportActionBar?.hide()
 }
+
 class MainActivity : AppCompatActivity() {
     lateinit var navController:NavController
     private val navBuilder = NavOptions.Builder()
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+
     }
     private fun addToBackStack(id:Int){
         val navOptions = navBuilder.setPopUpTo(id, false).build()
@@ -51,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                 .create()
             dialog.show()
         }else{
-            super.onBackPressed()
+            navController.navigateUp()
         }
     }
 }

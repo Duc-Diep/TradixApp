@@ -2,13 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:elevation="1dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <ScrollView
+        android:elevation="1dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="match_parent" >
         <RelativeLayout
             android:id="@+id/header"
             android:paddingHorizontal="50dp"
@@ -53,7 +55,7 @@
         </RelativeLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcv_item_home"
-            android:layout_marginHorizontal="30dp"
+            android:layout_marginHorizontal="40dp"
             android:layout_marginVertical="10dp"
             android:layout_below="@id/layout_title"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -78,12 +80,14 @@
 
     </RelativeLayout>
     </ScrollView>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <ImageButton
+        android:id="@+id/btn_ring"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/black_three"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/floating_button"
+        android:elevation="100dp"
         android:layout_margin="15dp"
         android:src="@drawable/icons_8_alarm"/>
 

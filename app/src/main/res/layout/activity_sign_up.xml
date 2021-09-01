@@ -22,7 +22,7 @@
         android:layout_height="match_parent"/>
 
     <ImageView
-        android:id="@+id/imgMoney"
+        android:id="@+id/img_money"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="30dp"
         android:src="@drawable/ic_illustration"
@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutTitle"
+        android:id="@+id/layout_title"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -75,8 +75,8 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
-        android:id="@+id/edtEmail"
-        app:layout_constraintTop_toBottomOf="@id/layoutTitle"
+        android:id="@+id/edt_email"
+        app:layout_constraintTop_toBottomOf="@id/layout_title"
         app:layout_constraintLeft_toRightOf="@id/v1"
         app:layout_constraintRight_toLeftOf="@id/v2"
         android:hint="@string/email"
@@ -84,8 +84,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
     <EditText
-        android:id="@+id/edtPassword"
-        app:layout_constraintTop_toBottomOf="@id/edtEmail"
+        android:id="@+id/edt_password"
+        app:layout_constraintTop_toBottomOf="@id/edt_email"
         app:layout_constraintLeft_toRightOf="@id/v1"
         app:layout_constraintRight_toLeftOf="@id/v2"
         android:hint="@string/password"
@@ -95,7 +95,7 @@
         android:layout_height="wrap_content"/>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSignUp"
-        app:layout_constraintTop_toBottomOf="@id/edtPassword"
+        app:layout_constraintTop_toBottomOf="@id/edt_password"
         app:layout_constraintLeft_toRightOf="@id/v1"
         app:layout_constraintRight_toLeftOf="@id/v2"
         android:text="@string/sign_up"
@@ -103,13 +103,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
     <TextView
-        android:id="@+id/tvForgotPassSignUp"
+        android:id="@+id/tv_forgotpass"
         app:layout_constraintLeft_toRightOf="@id/v1"
         app:layout_constraintTop_toBottomOf="@id/btnSignUp"
         android:text="@string/forgot_password"
         style="@style/TextStyle6" />
     <TextView
-        android:id="@+id/tvLogin"
+        android:id="@+id/tv_login"
         app:layout_constraintRight_toLeftOf="@id/v2"
         app:layout_constraintTop_toBottomOf="@id/btnSignUp"
         android:text="@string/login"

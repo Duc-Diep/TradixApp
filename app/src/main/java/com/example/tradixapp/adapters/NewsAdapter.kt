@@ -17,7 +17,7 @@ class NewsAdapter(var context: Context?, var listNews:ArrayList<News>):RecyclerV
         return NewsViewHolder(view)
     }
 
-    fun setCallBack(callBack:(News)->Unit){
+    fun setOnItemClick(callBack:(News)->Unit){
         onClick = callBack
     }
 

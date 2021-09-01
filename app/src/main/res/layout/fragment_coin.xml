@@ -6,11 +6,12 @@
     <RelativeLayout
         android:id="@+id/layout_header"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
+            android:padding="10dp"
             android:id="@+id/btn_back"
             android:layout_marginTop="25dp"
             android:src="@drawable/icons_8_expand_arrow"
@@ -44,11 +45,14 @@
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+        <ImageButton
+            android:id="@+id/btn_ring"
             android:layout_toLeftOf="@id/menu_ver"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:backgroundTint="@color/black_three"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:elevation="100dp"
+            android:background="@drawable/floating_button"
             android:layout_margin="15dp"
             android:src="@drawable/icons_8_alarm"/>
     </RelativeLayout>
@@ -144,7 +148,7 @@
         <RelativeLayout
             android:id="@+id/layout_title"
             android:layout_width="wrap_content"
-            android:padding="17dp"
+            android:paddingHorizontal="17dp"
             android:layout_height="wrap_content">
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcv_title"

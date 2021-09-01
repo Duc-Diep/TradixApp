@@ -12,7 +12,7 @@ class EmailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         hideActionBar()
         setContentView(R.layout.activity_email)
-        btnSendEmail.setOnClickListener {
+        btn_send_email.setOnClickListener {
             startActivity(Intent(this, ConfirmPassChangedActivity::class.java))
         }
     }
@@ -20,19 +20,19 @@ class EmailActivity : AppCompatActivity() {
         super.onStart()
         var handler = Handler(mainLooper)
         var thread = Thread{
-            btnSendEmail.isClickable = false
+            btn_send_email.isClickable = false
             var count:Int = 5
             while (count!=0){
                 Thread.sleep(1000)
                 count--
                 handler.post{
-                    tvWait.text = "Wait $count seconds before sending it"
+                    tv_wait.text = "Wait $count seconds before sending it"
                 }
             }
             handler.post{
-                tvWait.text = "You can send email to reset password"
+                tv_wait.text = "You can send email to reset password"
             }
-            btnSendEmail.isClickable = true
+            btn_send_email.isClickable = true
         }
         thread.start()
     }

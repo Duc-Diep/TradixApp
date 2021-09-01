@@ -5,19 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.tradixapp.R
 import com.example.tradixapp.adapters.TitleAdapter
-import kotlinx.android.synthetic.main.fragment_coin.view.rcv_title
+import com.example.tradixapp.objects.Coin
+import com.example.tradixapp.objects.Title
+import kotlinx.android.synthetic.main.fragment_coin.view.*
+import java.lang.Exception
 
 class CoinFragment : Fragment() {
     lateinit var titleAdapter:TitleAdapter
-    fun newInstance():CoinFragment {
-        val args = Bundle()
+    lateinit var listTitle:ArrayList<Title>
 
-        val fragment = CoinFragment()
-        fragment.arguments = args
-        return fragment
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,10 +27,32 @@ class CoinFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_coin,container,false)
         initAdapter()
         view.rcv_title.adapter = titleAdapter
+
+        view.btn_back.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
+
+        try {
+            val args: CoinFragmentArgs by navArgs()
+            var coin:Coin = args.coin
+            if (coin!=null){
+                view.tv_name.text = coin.name
+            }
+        }catch (ex:Exception){
+
+        }
+
         return view
     }
-    fun initAdapter(){
-        var listTitle = arrayListOf("General","Technical Section","Markets","Charts")
-        titleAdapter = TitleAdapter(context,listTitle)
+
+    private fun initAdapter(){
+        listTitle = ArrayList()
+        listTitle.apply {
+            add(Title("General",true))
+            add(Title("Technical Section",false))
+            add(Title("Markets",false))
+            add(Title("Charts",false))
+        }
+        titleAdapter = TitleAdapter(context,listTitle,"pink")
     }
 }

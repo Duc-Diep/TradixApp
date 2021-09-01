@@ -6,8 +6,6 @@ import android.os.Bundle
 import com.example.tradixapp.utils.AppPreferences
 import com.example.tradixapp.R
 import kotlinx.android.synthetic.main.activity_on_boarding2.*
-import kotlinx.android.synthetic.main.activity_on_boarding2.btnNext
-import kotlinx.android.synthetic.main.activity_on_boarding2.btnSkip
 
 class OnBoarding2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,13 +13,13 @@ class OnBoarding2 : AppCompatActivity() {
         setContentView(R.layout.activity_on_boarding2)
         hideActionBar()
         AppPreferences.init(this)
-        btnNext.setOnClickListener {
+        btn_next.setOnClickListener {
             startActivity(Intent(this, OnBoarding3::class.java))
         }
-        btnBack.setOnClickListener {
+        btn_back.setOnClickListener {
             finish()
         }
-        btnSkip.setOnClickListener {
+        btn_skip.setOnClickListener {
             AppPreferences.isCompleteTutorial = true
             startActivity(Intent(this, LoginActivity::class.java))
         }
