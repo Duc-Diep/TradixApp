@@ -55,4 +55,5 @@ class CoinFragment : Fragment() {
         }
         titleAdapter = TitleAdapter(context,listTitle,"pink")
     }
+
 }

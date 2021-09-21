@@ -47,10 +47,7 @@ class TitleAdapter(var context: Context?, var listTitle:ArrayList<Title>,var col
     }
 
     override fun getItemCount(): Int {
-        if (listTitle!=null){
             return listTitle.size
-        }
-        return 0
     }
     class TitleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val layout:RelativeLayout = itemView.findViewById(R.id.layout_title_item)

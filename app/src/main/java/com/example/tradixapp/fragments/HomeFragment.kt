@@ -75,9 +75,7 @@ class HomeFragment : Fragment() {
                     add(Coin("USD","NYSE","12:21:32","23.03","+203 (+1,04%)"))
                 }
             }
-            view.progress_bar.visibility = View.VISIBLE
             coinAdapter.notifyDataSetChanged()
-            view.progress_bar.visibility = View.GONE
         }
 
 

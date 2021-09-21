@@ -11,8 +11,8 @@ object AppPreferences {
     private val IS_COMPLETE_TUTORIAL = Pair("is_complete", false)
     private val USER_EMAIL = Pair("email","admin")
     private val USER_PASSWORD = Pair("password","123456")
-    fun init(context: Context) {
-        preferences = context.getSharedPreferences(NAME, MODE)
+    fun init(context: Context?) {
+        preferences = context?.getSharedPreferences(NAME, MODE)!!
     }
     private inline fun SharedPreferences.edit(operation: (SharedPreferences.Editor) -> Unit) {
         val editor = edit() //SharedPreferences.Editor editor

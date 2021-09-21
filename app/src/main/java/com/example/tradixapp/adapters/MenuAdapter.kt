@@ -11,10 +11,10 @@ import com.example.tradixapp.R
 import com.example.tradixapp.objects.MenuItem
 
 class MenuAdapter(var context: Context?, var listItem:ArrayList<MenuItem>):RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
-    val MENU_ITEM_TYPE_1:Int = 1
-    val MENU_ITEM_TYPE_2:Int = 2
-    val MENU_ITEM_TYPE_3:Int = 3
-    val MENU_ITEM_TYPE_4:Int = 4
+    private val MENU_ITEM_TYPE_1:Int = 1
+    private val MENU_ITEM_TYPE_2:Int = 2
+    private val MENU_ITEM_TYPE_3:Int = 3
+    private val MENU_ITEM_TYPE_4:Int = 4
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
         when(viewType){
             MENU_ITEM_TYPE_1 ->{
@@ -53,10 +53,7 @@ class MenuAdapter(var context: Context?, var listItem:ArrayList<MenuItem>):Recyc
     }
 
     override fun getItemCount(): Int {
-        if (listItem!=null){
             return listItem.size
-        }
-        return 0
     }
 
     class MenuViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

@@ -41,10 +41,7 @@ class NewsAdapter(var context: Context?, var listNews:ArrayList<News>):RecyclerV
 
 
     override fun getItemCount(): Int {
-        if(listNews!=null){
             return listNews.size
-        }
-        return 0
     }
     class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgAvatar:ImageView = itemView.findViewById(R.id.news_item_img)

@@ -9,22 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TradixApp">
-        <activity android:name=".activities.MainActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".activities.ConfirmPassChangedActivity" />
-        <activity android:name=".activities.EmailActivity" />
-        <activity android:name=".activities.SignUpActivity" />
-        <activity
-            android:name=".activities.LoginActivity"
-            android:launchMode="singleTask" />
-        <activity android:name=".activities.OnBoarding3" />
-        <activity android:name=".activities.OnBoarding2" />
-        <activity android:name=".activities.OnBoarding1">
+        <activity android:name=".activities.TutorialActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.ConfirmPassChangedActivity" />
+        <activity android:name=".activities.EmailActivity" />
+        <activity android:name=".activities.SignUpActivity" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:launchMode="singleTask" />
     </application>
 
 </manifest>

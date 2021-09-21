@@ -28,18 +28,13 @@ class MainActivity : AppCompatActivity() {
         bottom_navi.setupWithNavController(navController)
         bottom_navi.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.fragment_home -> addToBackStack(R.id.fragment_home)
-                R.id.fragment_news -> addToBackStack(R.id.fragment_news)
-                R.id.fragment_coin -> addToBackStack(R.id.fragment_coin)
-                R.id.fragment_customer -> addToBackStack(R.id.fragment_customer)
+                R.id.fragment_home -> navController.navigate(R.id.fragment_home)
+                R.id.fragment_news -> navController.navigate(R.id.fragment_news)
+                R.id.fragment_coin -> navController.navigate(R.id.fragment_coin)
+                R.id.fragment_customer -> navController.navigate(R.id.fragment_customer)
             }
             true
         }
-
-    }
-    private fun addToBackStack(id:Int){
-        val navOptions = navBuilder.setPopUpTo(id, false).build()
-        navController.navigate(id,null,navOptions)
     }
 
     override fun onBackPressed() {
@@ -53,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                 .create()
             dialog.show()
         }else{
-            navController.navigateUp()
+            super.onBackPressed()
         }
     }
 }
