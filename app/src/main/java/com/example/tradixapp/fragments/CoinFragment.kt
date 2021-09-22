@@ -1,5 +1,6 @@
 package com.example.tradixapp.fragments
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,9 @@ import com.example.tradixapp.adapters.TitleAdapter
 import com.example.tradixapp.objects.Coin
 import com.example.tradixapp.objects.Title
 import kotlinx.android.synthetic.main.fragment_coin.view.*
+import kotlinx.android.synthetic.main.fragment_coin.view.btn_ring
+import kotlinx.android.synthetic.main.fragment_coin.view.rcv_title
+import kotlinx.android.synthetic.main.fragment_home.view.*
 import java.lang.Exception
 
 class CoinFragment : Fragment() {
@@ -28,6 +32,9 @@ class CoinFragment : Fragment() {
         initAdapter()
         view.rcv_title.adapter = titleAdapter
 
+        view.btn_ring.setOnClickListener {
+            view.btn_ring.background.setTint(Color.BLUE)
+        }
         view.btn_back.setOnClickListener {
             requireActivity().onBackPressed()
         }

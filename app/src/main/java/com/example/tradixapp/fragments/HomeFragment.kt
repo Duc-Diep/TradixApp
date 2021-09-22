@@ -1,5 +1,6 @@
 package com.example.tradixapp.fragments
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -40,6 +41,9 @@ class HomeFragment : Fragment() {
         controller = findNavController()
         view.rcv_title.adapter = titleAdapter
 
+        view.btn_ring.setOnClickListener {
+            view.btn_ring.background.setTint(Color.BLUE)
+        }
         //khởi tạo rcv item coin
 
         view.rcv_item_home.apply {
